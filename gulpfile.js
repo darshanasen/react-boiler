@@ -11,6 +11,7 @@ const plumber = require('gulp-plumber');
 gulp.task('js', () => {
     browserify('src/app.js')
         .transform('babelify', {
+            sourceMaps: true,
             presets: ['es2015','react']
         })
         .bundle()
